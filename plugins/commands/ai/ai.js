@@ -7,7 +7,7 @@ function onCall({ message: m, args: ar }) {
   if (!q) return m.reply("ask a question.");
   
   m.react("⏳");
-  a.get(`https://rapido.zetsu.xyz/api/ai?q=${encodeURIComponent(q)}?uid=${m.senderID}&system=${system}`)
+  a.get(`https://rapido.zetsu.xyz/api/ai?q=${encodeURIComponent(q)}&uid=${m.senderID}&system=${system}`)
     .then(res => {
       m.react("✅");
       m.reply(res.data.response);
