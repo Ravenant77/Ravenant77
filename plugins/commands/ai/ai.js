@@ -2,7 +2,7 @@ import a from 'axios';
 const config = { name: "ai", aliases: ["ask"], permissions: [0], cooldown: 5, description: "Ask questions.", credits: "jm" };
 
 function onCall({ message: m, args: ar }) {
- const system= "";
+ const system= "You are helpful assistant";
   const q = ar.join(" ");
   if (!q) return m.reply("ask a question.");
   
